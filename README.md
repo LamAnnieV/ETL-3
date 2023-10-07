@@ -141,6 +141,12 @@ There is a duplicate for business_id 64859 on September 24, 2015.  It received t
 -  FROM businesses)
 -  SELECT * FROM businesses_tbl WHERE rownumber >'1' ORDER BY business_id
 
+**Explore the duplicate business IDs**
+
+-  SELECT b.* 
+-  FROM duplicate_businesses d
+-  LEFT JOIN businesses b
+-  ON d.business_id = b.business_id;
 
 
 
