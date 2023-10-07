@@ -8,13 +8,15 @@ By:  Annie V Lam - Kura Labs
 
 [San Francisco Department of Public Health Inspection Data for 2013 - 2016](https://c4databucket.s3.amazonaws.com/sanFranciscoRestaurantScores.zip)
 
-## Exploring the Data
+
+
+## Exploring the Violations Dataset
 
 There are three files uploaded to AWS S3 bucket:  businesses.csv, inspections.csv, and violations.csv.  The three sets of data were then imported to AWS Redshift inspections Dataabase the three files were uploaded as tables called businesses, inspections, and violations respectively.
 
-**How many inspections types are there?**
+**How many inspection types are there?**
 
-SELECT DISTINCT(type)
+-SELECT DISTINCT(type)
 
 FROM inspections;
 
@@ -44,7 +46,7 @@ WHERE type = 'New Ownership' and score is not NULL
 
 LIMIT 100;
 
-**Result: ** 
+**Result:**
 
 For New Ownership, only business id 87440 has a score for Aug 1, 2016.  Most likely this is an error where there should be no score or it was miscategorized as "New Ownership".  We would need to send this info to the business unit to verify.  
 
@@ -56,18 +58,57 @@ WHERE type = 'Reinspection/Followup' and score is not NULL
 
 LIMIT 100;
 
-**Result: ** 
+**Result:**
 
 For Reinspection/Followup, only business id 597 has a score for March 10, 2016.  Most likely this is an error where it was miss categorized as "New Ownership".  We would need to send this info to the business unit to verify. 
-
-
 
 SELECT *
 FROM inspections
 WHERE type = 'Routine - Unscheduled' and score is not NULL
 LIMIT 100;
 
+**Result:**
+All of the scores are from Routine - Unscheduled
 
-### SQL Queries to explore the data
+## Exploring the Inspection Dataset for duplicate scores
+
+**Create a key as save the query to a view**
+
+CREATE VIEW inspection_view_0 AS
+
+SELECT date+'-'+business_id as inspection_id,*
+
+FROM inspections
+
+WHERE score is not NULL AND type = 'Routine - Unscheduled'
+
+**Find the duplicates and save it to a view**
+
+CREATE VIEW duplicate_inspections AS
+
+SELECT inspection_id, count(inspection_id)
+
+FROM inspection_view_0
+
+GROUP BY inspection_id
+
+HAVING count(inspection_id) > 1;
+
+**Explore the duplicate transactions**
+
+SELECT i.* 
+
+FROM duplicate_inspections d
+
+LEFT JOIN inspection_view_0 I
+
+ON d.inspection_id = i.inspection_id
+
+**Result:**
+
+There is a duplicate for business_id 64859 on September 24, 2015.  It received two scores:  93 and 96.  Per the business unit, the correct score is 96.
+
+
+
 
 
