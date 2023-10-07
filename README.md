@@ -123,6 +123,15 @@ There is a duplicate for business_id 64859 on September 24, 2015.  It received t
 -  FROM business_violations
 -  GROUP BY violation_id
 -  HAVING COUNT(violation_id) > 1;
+  
+**CREATE A VIOLATION_VIEW WITH NO DUPLICATES**
+
+-  CREATE VIEW violation_view AS
+-  WITH violations_tbl AS
+-  (SELECT *, ROW_NUMBER()OVER(PARTITION BY violation_id ORDER BY violation_id) AS rownumber
+-  FROM business_violations)
+-  SELECT * FROM violations_tbl WHERE rownumber ='1' ORDER BY violation_id
+
 
 
 
