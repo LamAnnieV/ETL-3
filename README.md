@@ -40,7 +40,7 @@ New Ownership, Routine - Unscheduled, Reinspection/Followup
 -  WHERE type = 'New Ownership' and score is not NULL
 -  LIMIT 100;
 
-**Result:**
+**New Ownership Result:**
 
 For New Ownership, only business id 87440 has a score for Aug 1, 2016.  Most likely this is an error where there should be no score or it was miscategorized as "New Ownership".  We would need to send this info to the business unit to verify.  
 
@@ -49,7 +49,7 @@ For New Ownership, only business id 87440 has a score for Aug 1, 2016.  Most lik
 -  WHERE type = 'Reinspection/Followup' and score is not NULL
 -  LIMIT 100;
 
-**Result:**
+**Reinspection/Followup Result:**
 
 For Reinspection/Followup, only business id 597 has a score for March 10, 2016.  Most likely this is an error where it was miss categorized as "New Ownership".  We would need to send this info to the business unit to verify. 
 
@@ -58,7 +58,7 @@ For Reinspection/Followup, only business id 597 has a score for March 10, 2016. 
 -  WHERE type = 'Routine - Unscheduled' and score is not NULL
 -  LIMIT 100;
 
-**Result:**
+**Routine - Unscheduled Result:**
 All of the scores are from Routine - Unscheduled
 
 ## Exploring the Inspection Dataset for duplicate scores
