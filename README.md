@@ -157,7 +157,9 @@ There is a duplicate for business_id 64859 on September 24, 2015.  It received t
 **Result:**
 
 Most of the zips start with 94, there is one that starts with 92, some of the zip have the add-on 4 digit codes, there are null values, the zip that has a value "0", and the ones with the California state abbreviation in the postal_code.  Looked up zip code 92675 and it is not a San Francisco zip code, will send that to the business unit to verify.
+
 ![postal_code_1](postal_code_1.png)
+
 ![postal_code_2](postal_code_2.png)
 
 **CLEAN ZIP**
@@ -200,6 +202,8 @@ Most of the zips start with 94, there is one that starts with 92, some of the zi
 -  GROUP BY v.business_id, b.name
 -  HAVING b.name is NULL;
 
+  [Business in violation report not found in businesses list](violation_business_not_in_businesses_tbl.csv)
+
 **Business in inspection report not found in businesses list**
 
 -  CREATE VIEW inspection_business_not_in_businesses_tbl AS
@@ -209,6 +213,8 @@ Most of the zips start with 94, there is one that starts with 92, some of the zi
 -  ON s.business_id = b.business_id
 -  GROUP BY s.business_id, b.name
 -  HAVING b.name is NULL;
+
+[Business in inspection report not found in businesses list](Business in inspection report not found in businesses list.csv)
 
 
 CREATE VIEW busiensses_with_missing_zip AS
