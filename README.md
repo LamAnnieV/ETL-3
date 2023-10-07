@@ -16,9 +16,8 @@ There are three files uploaded to AWS S3 bucket:  businesses.csv, inspections.cs
 
 **How many inspection types are there?**
 
--SELECT DISTINCT(type)
-
-FROM inspections;
+-  SELECT DISTINCT(type)
+-  FROM inspections;
 
 **Result:**
 
