@@ -105,7 +105,7 @@ There is a duplicate for business_id 64859 on September 24, 2015.  It received t
 -  FROM inspections
 -  WHERE type = 'Routine - Unscheduled' AND score is not NULL AND date+business_id+CONVERT(varchar(10),score) <> '201509246485991';
 
-## Cleaning the Business Dataset
+## Cleaning the Violations Dataset
 
 **ADD KEY to violations**
 
