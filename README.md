@@ -131,6 +131,15 @@ There is a duplicate for business_id 64859 on September 24, 2015.  It received t
 -  (SELECT *, ROW_NUMBER()OVER(PARTITION BY violation_id ORDER BY violation_id) AS rownumber
 -  FROM business_violations)
 -  SELECT * FROM violations_tbl WHERE rownumber ='1' ORDER BY violation_id
+-  
+
+**CREATE VIEW for Duplicate Businesses**
+
+-  CREATE VIEW duplicate_businesses AS
+-  WITH businesses_tbl AS
+-  (SELECT *, ROW_NUMBER()OVER(PARTITION BY business_id ORDER BY business_id) AS rownumber
+-  FROM businesses)
+-  SELECT * FROM businesses_tbl WHERE rownumber >'1' ORDER BY business_id
 
 
 
