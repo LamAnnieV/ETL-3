@@ -137,22 +137,22 @@ There is a duplicate for business_id 64859 on September 24, 2015.  It received t
 **CREATE VIEW for Duplicate Businesses**
 
 -  CREATE VIEW duplicate_businesses AS
--  WITH businesses_tbl AS
+-  WITH businesses_x AS
 -  (SELECT *, ROW_NUMBER()OVER(PARTITION BY business_id ORDER BY business_id) AS rownumber
--  FROM businesses)
--  SELECT * FROM businesses_tbl WHERE rownumber >'1' ORDER BY business_id
+-  FROM businesses_tbl)
+-  SELECT * FROM businesses_x WHERE rownumber >'1' ORDER BY business_id
 
 **Explore the duplicate business IDs**
 
 -  SELECT b.* 
 -  FROM duplicate_businesses d
--  LEFT JOIN businesses b
+-  LEFT JOIN businesses_tbl b
 -  ON d.business_id = b.business_id;
 
 **View the distinct postal code**
 
 -  SELECT DISTINCT(postal_code)
--  FROM businesses;
+-  FROM businesses_tbl;
 
 **Result:**
 
@@ -160,6 +160,17 @@ Most of the zips start with 94, there is one that starts with 92, some of the zi
 ![postal_code_1](postal_code_1.png)
 ![postal_code_2](postal_code_2.png)
 
+**CLEAN ZIP**
+
+-  CREATE VIEW businesses_view_0 AS
+-  SELECT business_id, name, address, city, postal_code,
+-  CASE 
+-  WHEN LEN(postal_code) < 5 THEN NULL
+-  ELSE SUBSTRING(postal_code, 1, 5)
+-  END AS zip
+-  FROM businesses_tbl
+-  WHERE postal_code <> ‘92672’ or postal_code <> ‘94609’
+-  ORDER BY postal_code;
 
 
 
