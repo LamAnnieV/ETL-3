@@ -164,13 +164,58 @@ Most of the zips start with 94, there is one that starts with 92, some of the zi
 
 -  CREATE VIEW businesses_view_0 AS
 -  SELECT business_id, name, address, city, postal_code,
--  CASE 
+-  CASE
 -  WHEN LEN(postal_code) < 5 THEN NULL
+-  WHEN postal_code = '92672' THEN NULL
+-  WHEN postal_code = '94609' THEN NULL
 -  ELSE SUBSTRING(postal_code, 1, 5)
 -  END AS zip
 -  FROM businesses_tbl
--  WHERE postal_code <> ‘92672’ or postal_code <> ‘94609’
--  ORDER BY postal_code;
+-  ORDER BY postal_code DESC;
+
+**CREATE A BUSINESSES_VIEW WITH NO DUPLICATES**
+
+-  CREATE VIEW businesses_view AS
+-  WITH business AS
+-  (SELECT *, ROW_NUMBER()OVER(PARTITION BY business_id ORDER BY business_id) AS rownumber
+-  FROM businesses_view_0)
+-  SELECT * FROM business WHERE rownumber ='1' ORDER BY business_id
+
+**VERIFY THERE ARE NO DUPLICATES**
+
+-  SELECT business_id, COUNT(business_id) AS count_of_business_id
+-  FROM businesses_view
+-  GROUP BY business_id
+-  HAVING COUNT(business_id) > 1;
+
+##REPORTS TO BUSINESS UNIT to VERIFY DATA
+
+**Business in violation report not found in businesses list**
+
+-  CREATE VIEW violation_business_not_in_businesses_tbl AS
+-  SELECT v.business_id, b.name
+-  FROM violation_view v
+-  LEFT JOIN businesses_view b
+-  ON v.business_id = b.business_id
+-  GROUP BY v.business_id, b.name
+-  HAVING b.name is NULL;
+
+**Business in inspection report not found in businesses list**
+
+-  CREATE VIEW inspection_business_not_in_businesses_tbl AS
+-  SELECT s.business_id, b.name
+-  FROM inspection_score_view s
+-  LEFT JOIN businesses_view b
+-  ON s.business_id = b.business_id
+-  GROUP BY s.business_id, b.name
+-  HAVING b.name is NULL;
+
+
+CREATE VIEW busiensses_with_missing_zip AS
+SELECT * 
+FROM businesses_view
+WHERE zip is NULL;
+
 
 
 
