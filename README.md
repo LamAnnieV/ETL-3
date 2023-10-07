@@ -156,7 +156,7 @@ There is a duplicate for business_id 64859 on September 24, 2015.  It received t
 **Result:**
 
 Most of the zips start with 94, there is one that starts with 92, some of the zip have the add-on 4 digit codes, there are null values, zip that has a value "0", and ones with the California state abbreviation in the postal_code.  
-[postal_code_1](postal_code_1.png)
-[postal_code_2](postal_code_2.png)
+![postal_code_1](postal_code_1.png)
+![postal_code_2](postal_code_2.png)
 
 
