@@ -128,7 +128,7 @@ There is a duplicate for business_id 64859 on September 24, 2015.  It received t
 -  FROM business_violations)
 -  SELECT * FROM violations_tbl WHERE rownumber ='1' ORDER BY violation_id
 
- ## Cleaning the Violation Dataset
+ ## Cleaning the Businesses Dataset
 
 **CREATE VIEW for Duplicate Businesses**
 
