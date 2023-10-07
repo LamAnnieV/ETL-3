@@ -25,11 +25,11 @@ Complaint Reinspection/Followup	 score all NULL, New Construction, New Ownership
 
 **How many of the inspection types have scores?**
 
-SELECT DISTINCT(type)
+-  SELECT DISTINCT(type)
 
-FROM inspections
+-  FROM inspections
 
-WHERE score is not NULL;
+-  WHERE score is not NULL;
 
 **Result:**
 
@@ -37,34 +37,34 @@ New Ownership, Routine - Unscheduled, Reinspection/Followup
 
 **Explore each of the three data types where the score is not NULL:**
 
-SELECT *
+-  SELECT *
 
-FROM inspections
+-  FROM inspections
 
-WHERE type = 'New Ownership' and score is not NULL
+-  WHERE type = 'New Ownership' and score is not NULL
 
-LIMIT 100;
+-  LIMIT 100;
 
 **Result:**
 
 For New Ownership, only business id 87440 has a score for Aug 1, 2016.  Most likely this is an error where there should be no score or it was miscategorized as "New Ownership".  We would need to send this info to the business unit to verify.  
 
-SELECT *
+-  SELECT *
 
-FROM inspections
+-  FROM inspections
 
-WHERE type = 'Reinspection/Followup' and score is not NULL
+-  WHERE type = 'Reinspection/Followup' and score is not NULL
 
-LIMIT 100;
+-  LIMIT 100;
 
 **Result:**
 
 For Reinspection/Followup, only business id 597 has a score for March 10, 2016.  Most likely this is an error where it was miss categorized as "New Ownership".  We would need to send this info to the business unit to verify. 
 
-SELECT *
-FROM inspections
-WHERE type = 'Routine - Unscheduled' and score is not NULL
-LIMIT 100;
+-  SELECT *
+-  FROM inspections
+-  WHERE type = 'Routine - Unscheduled' and score is not NULL
+-  LIMIT 100;
 
 **Result:**
 All of the scores are from Routine - Unscheduled
@@ -73,35 +73,35 @@ All of the scores are from Routine - Unscheduled
 
 **Create a key as save the query to a view**
 
-CREATE VIEW inspection_view_0 AS
+-  CREATE VIEW inspection_view_0 AS
 
-SELECT date+'-'+business_id as inspection_id,*
+-  SELECT date+'-'+business_id as inspection_id,*
 
-FROM inspections
+-  FROM inspections
 
-WHERE score is not NULL AND type = 'Routine - Unscheduled'
+-  WHERE score is not NULL AND type = 'Routine - Unscheduled';
 
 **Find the duplicates and save it to a view**
 
-CREATE VIEW duplicate_inspections AS
+-  CREATE VIEW duplicate_inspections AS
 
-SELECT inspection_id, count(inspection_id)
+-  SELECT inspection_id, count(inspection_id)
 
-FROM inspection_view_0
+-  FROM inspection_view_0
 
-GROUP BY inspection_id
+-  GROUP BY inspection_id
 
-HAVING count(inspection_id) > 1;
+-  HAVING count(inspection_id) > 1;
 
 **Explore the duplicate transactions**
 
-SELECT i.* 
+-  SELECT i.* 
 
-FROM duplicate_inspections d
+-  FROM duplicate_inspections d
 
-LEFT JOIN inspection_view_0 I
+-  LEFT JOIN inspection_view_0 I
 
-ON d.inspection_id = i.inspection_id
+-  ON d.inspection_id = i.inspection_id
 
 **Result:**
 
