@@ -1,0 +1,93 @@
+year,business_id,name,risk_category,violationtypeid,description
+2014,10102,BODEGA BISTRO,High Risk,103103,High risk food holding temperature 
+2014,10102,BODEGA BISTRO,High Risk,103109,Unclean or unsanitary food contact surfaces
+2014,10102,BODEGA BISTRO,High Risk,103114,High risk vermin infestation
+2015,10102,BODEGA BISTRO,High Risk,103105,Improper cooling methods
+2015,10102,BODEGA BISTRO,High Risk,103108,Contaminated or adulterated food
+2015,10102,BODEGA BISTRO,High Risk,103109,Unclean or unsanitary food contact surfaces
+2015,10102,BODEGA BISTRO,High Risk,103114,High risk vermin infestation
+2016,10102,BODEGA BISTRO,High Risk,103103,High risk food holding temperature 
+2016,10102,BODEGA BISTRO,High Risk,103114,High risk vermin infestation
+2013,1912,Cafe Bakery,High Risk,103103,High risk food holding temperature 
+2013,1912,Cafe Bakery,High Risk,103105,Improper cooling methods
+2013,1912,Cafe Bakery,High Risk,103105,Improper cooling methods
+2014,1912,Cafe Bakery,High Risk,103103,High risk food holding temperature 
+2014,1912,Cafe Bakery,High Risk,103103,High risk food holding temperature 
+2014,1912,Cafe Bakery,High Risk,103109,Unclean or unsanitary food contact surfaces
+2014,1912,Cafe Bakery,High Risk,103114,High risk vermin infestation
+2016,1912,Cafe Bakery,High Risk,103103,High risk food holding temperature 
+2016,1912,Cafe Bakery,High Risk,103105,Improper cooling methods
+2013,1757,Dar Bar Pakistani/Indian Cusine,High Risk,103109,Unclean or unsanitary food contact surfaces
+2014,1757,Dar Bar Pakistani/Indian Cusine,High Risk,103114,High risk vermin infestation
+2015,1757,Dar Bar Pakistani/Indian Cusine,High Risk,103103,High risk food holding temperature 
+2015,1757,Dar Bar Pakistani/Indian Cusine,High Risk,103109,Unclean or unsanitary food contact surfaces
+2015,1757,Dar Bar Pakistani/Indian Cusine,High Risk,103114,High risk vermin infestation
+2016,1757,Dar Bar Pakistani/Indian Cusine,High Risk,103102,Unclean hands or improper use of gloves
+2016,1757,Dar Bar Pakistani/Indian Cusine,High Risk,103103,High risk food holding temperature 
+2016,1757,Dar Bar Pakistani/Indian Cusine,High Risk,103114,High risk vermin infestation
+2013,2326,IRMA'S PAMPANGA RESTAURANT,High Risk,103102,Unclean hands or improper use of gloves
+2013,2326,IRMA'S PAMPANGA RESTAURANT,High Risk,103105,Improper cooling methods
+2013,2326,IRMA'S PAMPANGA RESTAURANT,High Risk,103114,High risk vermin infestation
+2014,2326,IRMA'S PAMPANGA RESTAURANT,High Risk,103103,High risk food holding temperature 
+2014,2326,IRMA'S PAMPANGA RESTAURANT,High Risk,103114,High risk vermin infestation
+2015,2326,IRMA'S PAMPANGA RESTAURANT,High Risk,103103,High risk food holding temperature 
+2015,2326,IRMA'S PAMPANGA RESTAURANT,High Risk,103108,Contaminated or adulterated food
+2015,2326,IRMA'S PAMPANGA RESTAURANT,High Risk,103114,High risk vermin infestation
+2016,2326,IRMA'S PAMPANGA RESTAURANT,High Risk,103105,Improper cooling methods
+2016,2326,IRMA'S PAMPANGA RESTAURANT,High Risk,103112,No hot water or running water
+2013,69016,Lahore Karahi,High Risk,103103,High risk food holding temperature 
+2013,69016,Lahore Karahi,High Risk,103109,Unclean or unsanitary food contact surfaces
+2014,69016,Lahore Karahi,High Risk,103103,High risk food holding temperature 
+2014,69016,Lahore Karahi,High Risk,103109,Unclean or unsanitary food contact surfaces
+2015,69016,Lahore Karahi,High Risk,103109,Unclean or unsanitary food contact surfaces
+2015,69016,Lahore Karahi,High Risk,103114,High risk vermin infestation
+2016,69016,Lahore Karahi,High Risk,103102,Unclean hands or improper use of gloves
+2016,69016,Lahore Karahi,High Risk,103109,Unclean or unsanitary food contact surfaces
+2016,69016,Lahore Karahi,High Risk,103114,High risk vermin infestation
+2013,65066,Lers Ros Thai Noodle,High Risk,103102,Unclean hands or improper use of gloves
+2013,65066,Lers Ros Thai Noodle,High Risk,103103,High risk food holding temperature 
+2013,65066,Lers Ros Thai Noodle,High Risk,103109,Unclean or unsanitary food contact surfaces
+2013,65066,Lers Ros Thai Noodle,High Risk,103114,High risk vermin infestation
+2014,65066,Lers Ros Thai Noodle,High Risk,103103,High risk food holding temperature 
+2014,65066,Lers Ros Thai Noodle,High Risk,103108,Contaminated or adulterated food
+2015,65066,Lers Ros Thai Noodle,High Risk,103105,Improper cooling methods
+2015,65066,Lers Ros Thai Noodle,High Risk,103109,Unclean or unsanitary food contact surfaces
+2016,65066,Lers Ros Thai Noodle,High Risk,103103,High risk food holding temperature 
+2016,65066,Lers Ros Thai Noodle,High Risk,103105,Improper cooling methods
+2014,1843,Ma's Dim Sum & Cafe,High Risk,103103,High risk food holding temperature 
+2015,1843,Ma's Dim Sum & Cafe,High Risk,103103,High risk food holding temperature 
+2015,1843,Ma's Dim Sum & Cafe,High Risk,103108,Contaminated or adulterated food
+2015,1843,Ma's Dim Sum & Cafe,High Risk,103109,Unclean or unsanitary food contact surfaces
+2015,1843,Ma's Dim Sum & Cafe,High Risk,103114,High risk vermin infestation
+2016,1843,Ma's Dim Sum & Cafe,High Risk,103102,Unclean hands or improper use of gloves
+2016,1843,Ma's Dim Sum & Cafe,High Risk,103103,High risk food holding temperature 
+2016,1843,Ma's Dim Sum & Cafe,High Risk,103105,Improper cooling methods
+2016,1843,Ma's Dim Sum & Cafe,High Risk,103105,Improper cooling methods
+2016,1843,Ma's Dim Sum & Cafe,High Risk,103107,Improper reheating of food
+2016,1843,Ma's Dim Sum & Cafe,High Risk,103109,Unclean or unsanitary food contact surfaces
+2013,2421,ST FRANCIS FOUNTAIN,High Risk,103102,Unclean hands or improper use of gloves
+2013,2421,ST FRANCIS FOUNTAIN,High Risk,103103,High risk food holding temperature 
+2013,2421,ST FRANCIS FOUNTAIN,High Risk,103105,Improper cooling methods
+2013,2421,ST FRANCIS FOUNTAIN,High Risk,103109,Unclean or unsanitary food contact surfaces
+2014,2421,ST FRANCIS FOUNTAIN,High Risk,103104,Unauthorized or unsafe use of time as a public health control measure
+2014,2421,ST FRANCIS FOUNTAIN,High Risk,103105,Improper cooling methods
+2015,2421,ST FRANCIS FOUNTAIN,High Risk,103102,Unclean hands or improper use of gloves
+2015,2421,ST FRANCIS FOUNTAIN,High Risk,103103,High risk food holding temperature 
+2016,2421,ST FRANCIS FOUNTAIN,High Risk,103105,Improper cooling methods
+2013,67330,San Tung Restaurant LLC,High Risk,103102,Unclean hands or improper use of gloves
+2013,67330,San Tung Restaurant LLC,High Risk,103103,High risk food holding temperature 
+2013,67330,San Tung Restaurant LLC,High Risk,103108,Contaminated or adulterated food
+2014,67330,San Tung Restaurant LLC,High Risk,103108,Contaminated or adulterated food
+2015,67330,San Tung Restaurant LLC,High Risk,103102,Unclean hands or improper use of gloves
+2015,67330,San Tung Restaurant LLC,High Risk,103103,High risk food holding temperature 
+2016,67330,San Tung Restaurant LLC,High Risk,103102,Unclean hands or improper use of gloves
+2016,67330,San Tung Restaurant LLC,High Risk,103103,High risk food holding temperature 
+2016,67330,San Tung Restaurant LLC,High Risk,103105,Improper cooling methods
+2014,17570,Tres Agaves,High Risk,103103,High risk food holding temperature 
+2014,17570,Tres Agaves,High Risk,103105,Improper cooling methods
+2015,17570,Tres Agaves,High Risk,103103,High risk food holding temperature 
+2015,17570,Tres Agaves,High Risk,103105,Improper cooling methods
+2015,17570,Tres Agaves,High Risk,103114,High risk vermin infestation
+2016,17570,Tres Agaves,High Risk,103105,Improper cooling methods
+2016,17570,Tres Agaves,High Risk,103109,Unclean or unsanitary food contact surfaces
+2016,17570,Tres Agaves,High Risk,103109,Unclean or unsanitary food contact surfaces
