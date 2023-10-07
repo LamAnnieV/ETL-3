@@ -216,12 +216,14 @@ Most of the zips start with 94, there is one that starts with 92, some of the zi
 
 [Business in inspection report not found in businesses list](inspection_business_not_in_businesses_tbl.csv)
 
+**Incorrect Postal code List**
 
--  CREATE VIEW busiensses_with_missing_zip AS
--  SELECT * 
--  FROM businesses_view
+-  CREATE VIEW busiensses_with_incorrect_zip AS
+-  SELECT *
+-  FROM businesses_view_0
 -  WHERE zip is NULL;
 
+[Incorrect Postal code List](busiensses_with_incorrect_zip.csv)
 
 
 
