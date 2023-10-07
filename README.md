@@ -237,6 +237,8 @@ Most of the zips start with 94, there is one that starts with 92, some of the zi
 -  HAVING zip is not NULL
 -  ORDER BY b.zip, v.risk_category;
 
+[Distribution of Risk](q1_distribution_of_risk.csv)
+
 **2) What is the average score of restaurants in the different zip codes by year?**
 
 -  CREATE VIEW q2_avg_score_by_year_zip AS
