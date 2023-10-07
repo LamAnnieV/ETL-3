@@ -8,11 +8,21 @@ By:  Annie V Lam - Kura Labs
 
 [San Francisco Department of Public Health Inspection Data for 2013 - 2016](https://c4databucket.s3.amazonaws.com/sanFranciscoRestaurantScores.zip)
 
-
-
-## Exploring the Violations Dataset
-
 There are three files uploaded to AWS S3 bucket:  businesses.csv, inspections.csv, and violations.csv.  The three sets of data were then imported to AWS Redshift inspections Dataabase the three files were uploaded as tables called businesses, inspections, and violations respectively.
+
+## Cleaning the Inspection Dataset
+
+**FORMAT DATE**
+
+-  ALTER TABLE inspections 
+-  ADD COLUMN inspection_date DATE;
+
+-  UPDATE inspections
+-  SET inspection_date = TO_DATE(date, 'YYYYMMDD');
+
+
+UPDATE inspections SET inspection_date = TO_DATE(date, 'YYYYMMDD');
+
 
 **How many inspection types are there?**
 
@@ -82,13 +92,16 @@ All of the scores are from Routine - Unscheduled
 
 -  SELECT i.* 
 -  FROM duplicate_inspections d
--  LEFT JOIN inspection_view_0 I
+-  LEFT JOIN inspection_view_0 i
 -  ON d.inspection_id = i.inspection_id
 
 **Result:**
 
 There is a duplicate for business_id 64859 on September 24, 2015.  It received two scores:  93 and 96.  Per the business unit, the correct score is 96.
 
+### Creating a Clean Inspection dataset
+
+## Exploring the Inspection Dataset
 
 
 
