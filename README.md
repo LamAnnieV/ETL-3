@@ -6,7 +6,7 @@ By:  Annie V Lam - Kura Labs
 
 ## Dataset
 
-      [San Francisco Department of Public Health Inspection Data for 2013 - 2016](https://c4databucket.s3.amazonaws.com/sanFranciscoRestaurantScores.zip)
+[San Francisco Department of Public Health Inspection Data for 2013 - 2016](https://c4databucket.s3.amazonaws.com/sanFranciscoRestaurantScores.zip)
 
 There are three files uploaded to AWS S3 bucket:  businesses.csv, inspections.csv, and violations.csv.  The three sets of data were then imported to AWS Redshift inspections Dataabase the three files were uploaded as tables called businesses_tbl, inspections, and violations respectively.
 
@@ -154,9 +154,9 @@ There is a duplicate for business_id 64859 on September 24, 2015.  It received t
 
 Most of the zips start with 94, there is one that starts with 92, some of the zip have the add-on 4 digit codes, there are null values, the zip that has a value "0", and the ones with the California state abbreviation in the postal_code.  Looked up zip code 92675 and it is not a San Francisco zip code, will send that to the business unit to verify.
 
-      ![postal_code_1](postal_code_1.png)
+![postal_code_1](postal_code_1.png)
 
-      ![postal_code_2](postal_code_2.png)
+![postal_code_2](postal_code_2.png)
 
 **CLEAN ZIP**
 
