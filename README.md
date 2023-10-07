@@ -101,6 +101,7 @@ All of the scores are from Routine - Unscheduled
 There is a duplicate for business_id 64859 on September 24, 2015.  It received two scores:  93 and 96.  Per the business unit, the correct score is 96.
 
 ### Creating a Clean Inspection dataset
+
 -  CREATE VIEW inspection_score_view AS
 -  SELECT date+'-'+business_id as inspection_id, business_id , type as Type, inspection_date, score
 -  FROM inspections
@@ -108,8 +109,20 @@ There is a duplicate for business_id 64859 on September 24, 2015.  It received t
 
 
 
-## Exploring the Inspection Dataset
+## Cleaning the Violation Dataset
 
+**ADD KEY to violations**
+
+-  CREATE VIEW business_violations AS
+-  SELECT SUBSTRING(date, 1, 4)+SUBSTRING(date, 6, 2)+SUBSTRING(date, 9, 2)+'-'+business_id+'-'+violationtypeid AS violation_id, *
+-  FROM violations;
+
+**VERIFY THERE ARE NO DUPLICATES in Violations**
+
+-  SELECT violation_id, COUNT(violation_id) AS count_of_violation_id
+-  FROM business_violations
+-  GROUP BY violation_id
+-  HAVING COUNT(violation_id) > 1;
 
 
 
