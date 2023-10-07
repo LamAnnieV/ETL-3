@@ -10,7 +10,7 @@ By:  Annie V Lam - Kura Labs
 
 There are three files uploaded to AWS S3 bucket:  businesses.csv, inspections.csv, and violations.csv.  The three sets of data were then imported to AWS Redshift inspections Dataabase the three files were uploaded as tables called businesses_tbl, inspections, and violations respectively.
 
-## Cleaning the Inspection Dataset
+## Exploring and Cleaning the Inspection Dataset
 
 **Add a new column field inspection_date to be formatted later**
 
@@ -70,9 +70,9 @@ For Reinspection/Followup, only business id 597 has a score for March 10, 2016. 
 **Routine - Unscheduled Result:**
 All of the scores are from Routine - Unscheduled
 
-## Exploring the Inspection Dataset for duplicate scores
+### Exploring the Inspection Dataset for duplicate scores
 
-**Create a key as save the query to a view**
+**Create a key and save the query to a view**
 
 -  CREATE VIEW inspection_view_0 AS
 -  SELECT date+'-'+business_id as inspection_id,*
@@ -105,7 +105,7 @@ There is a duplicate for business_id 64859 on September 24, 2015.  It received t
 -  FROM inspections
 -  WHERE type = 'Routine - Unscheduled' AND score is not NULL AND date+business_id+CONVERT(varchar(10),score) <> '201509246485991';
 
-## Cleaning the Violations Dataset
+## Exploring and Cleaning the Violations Dataset
 
 **ADD KEY to violations**
 
@@ -128,7 +128,7 @@ There is a duplicate for business_id 64859 on September 24, 2015.  It received t
 -  FROM business_violations)
 -  SELECT * FROM violations_tbl WHERE rownumber ='1' ORDER BY violation_id
 
- ## Cleaning the Businesses Dataset
+ ## Exploring and Cleaning the Businesses Dataset
 
 **CREATE VIEW for Duplicate Businesses**
 
