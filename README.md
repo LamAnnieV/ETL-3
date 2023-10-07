@@ -234,6 +234,7 @@ Most of the zips start with 94, there is one that starts with 92, some of the zi
 -  LEFT JOIN businesses_view b
 -  ON v.business_id = b.business_id
 -  GROUP BY v.risk_category, b.zip
+-  HAVING zip is not NULL
 -  ORDER BY b.zip, v.risk_category;
 
 **2) What is the average score of restaurants in the different zip codes by year?**
