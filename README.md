@@ -214,7 +214,7 @@ Most of the zips start with 94, there is one that starts with 92, some of the zi
 -  GROUP BY s.business_id, b.name
 -  HAVING b.name is NULL;
 
-[Business in inspection report not found in businesses list](Business in inspection report not found in businesses list.csv)
+[Business in inspection report not found in businesses list](inspection_business_not_in_businesses_tbl.csv)
 
 
 CREATE VIEW busiensses_with_missing_zip AS
