@@ -6,7 +6,7 @@ By:  Annie V Lam - Kura Labs
 
 ## Dataset
 
-[San Francisco Department of Public Health Inspection Data for 2013 - 2016](https://c4databucket.s3.amazonaws.com/sanFranciscoRestaurantScores.zip)
+      [San Francisco Department of Public Health Inspection Data for 2013 - 2016](https://c4databucket.s3.amazonaws.com/sanFranciscoRestaurantScores.zip)
 
 There are three files uploaded to AWS S3 bucket:  businesses.csv, inspections.csv, and violations.csv.  The three sets of data were then imported to AWS Redshift inspections Dataabase the three files were uploaded as tables called businesses_tbl, inspections, and violations respectively.
 
@@ -154,9 +154,9 @@ There is a duplicate for business_id 64859 on September 24, 2015.  It received t
 
 Most of the zips start with 94, there is one that starts with 92, some of the zip have the add-on 4 digit codes, there are null values, the zip that has a value "0", and the ones with the California state abbreviation in the postal_code.  Looked up zip code 92675 and it is not a San Francisco zip code, will send that to the business unit to verify.
 
-![postal_code_1](postal_code_1.png)
+      ![postal_code_1](postal_code_1.png)
 
-![postal_code_2](postal_code_2.png)
+      ![postal_code_2](postal_code_2.png)
 
 **CLEAN ZIP**
 
@@ -198,7 +198,7 @@ Most of the zips start with 94, there is one that starts with 92, some of the zi
 -  GROUP BY v.business_id, b.name
 -  HAVING b.name is NULL;
 
-  [Business in violation report not found in businesses list](violation_business_not_in_businesses_tbl.csv)
+      [Business in violation report not found in businesses list](violation_business_not_in_businesses_tbl.csv)
 
 **Business in inspection report not found in businesses list**
 
@@ -210,7 +210,7 @@ Most of the zips start with 94, there is one that starts with 92, some of the zi
 -  GROUP BY s.business_id, b.name
 -  HAVING b.name is NULL;
 
-[Business in inspection report not found in businesses list](inspection_business_not_in_businesses_tbl.csv)
+      [Business in inspection report not found in businesses list](inspection_business_not_in_businesses_tbl.csv)
 
 **Incorrect Postal code List**
 
@@ -219,7 +219,7 @@ Most of the zips start with 94, there is one that starts with 92, some of the zi
 -  FROM businesses_view_0
 -  WHERE zip is NULL;
 
-[Incorrect Postal code List](busiensses_with_incorrect_zip.csv)
+      [Incorrect Postal code List](busiensses_with_incorrect_zip.csv)
 
 **Note:  If we have access to a database with all San Francisco addresses or longitude and latitude coordinates with their postal codes, we will be able to query that database and find the corresponding postal codes.**
 
@@ -237,7 +237,7 @@ Most of the zips start with 94, there is one that starts with 92, some of the zi
 -  HAVING zip is not NULL
 -  ORDER BY b.zip, v.risk_category;
 
-[Distribution of Risk](q1_distribution_of_risk.csv)
+      [Distribution of Risk](q1_distribution_of_risk.csv)
 
 **2) What is the average score of restaurants in the different zip codes by year?**
 
@@ -250,7 +250,7 @@ Most of the zips start with 94, there is one that starts with 92, some of the zi
 -  HAVING zip is not NULL
 -  ORDER BY b.zip, year;
 
-  [Average score of restaurants in the different zip codes by year](q2_avg_score_by_year_zip.csv)
+      [Average score of restaurants in the different zip codes by year](q2_avg_score_by_year_zip.csv)
 
 **3) Which are the top 10 restaurants that have the most "High Risk" violations?  What violations are they?**
 
@@ -264,7 +264,7 @@ Most of the zips start with 94, there is one that starts with 92, some of the zi
 -  ORDER BY high_risk_count DESC, v.business_id
 -  LIMIT 10;
 
-    [Top 10 restaurants that have the most "High Risk" violations](q3a_highest_risk_10_restaurants.csv)
+      [Top 10 restaurants that have the most "High Risk" violations](q3a_highest_risk_10_restaurants.csv)
 
 -  CREATE VIEW q3b_highest_risk_10_restaurants_violations AS
 -  SELECT DATE_PART_YEAR(v.date) as year, v.business_id, b.name, v.risk_category, v.violationtypeid, v.description
