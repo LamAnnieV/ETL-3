@@ -229,7 +229,7 @@ Most of the zips start with 94, there is one that starts with 92, some of the zi
 **1) What is the distribution of "risk_category violations" per zip code? (per zip, what are the numbers/percentages of high/low/moderate risk violations)**
 
 -  CREATE VIEW q1_distribution_of_risk AS
--  SELECT b.zip, v.risk_category, COUNT('*') AS risk_count, ROUND((COUNT('*') * 1.0 / SUM(COUNT(*)) OVER (PARTITION BY b.zip)) * 100, 2) as risk_percentage
+-  SELECT b.zip, v.risk_category, COUNT( * ) AS risk_count, ROUND((COUNT( * ) * 1.0 / SUM(COUNT(*)) OVER (PARTITION BY b.zip)) * 100, 2) as risk_percentage
 -  FROM violation_view v
 -  LEFT JOIN businesses_view b
 -  ON v.business_id = b.business_id
