@@ -8,7 +8,7 @@ By:  Annie V Lam - Kura Labs
 
 [San Francisco Department of Public Health Inspection Data for 2013 - 2016](https://c4databucket.s3.amazonaws.com/sanFranciscoRestaurantScores.zip)
 
-There are three files uploaded to AWS S3 bucket:  businesses.csv, inspections.csv, and violations.csv.  The three sets of data were then imported to AWS Redshift inspections Dataabase the three files were uploaded as tables called businesses, inspections, and violations respectively.
+There are three files uploaded to AWS S3 bucket:  businesses.csv, inspections.csv, and violations.csv.  The three sets of data were then imported to AWS Redshift inspections Dataabase the three files were uploaded as tables called businesses_tbl, inspections, and violations respectively.
 
 ## Cleaning the Inspection Dataset
 
@@ -21,9 +21,7 @@ There are three files uploaded to AWS S3 bucket:  businesses.csv, inspections.cs
 -  UPDATE inspections
 -  SET inspection_date = TO_DATE(date, 'YYYYMMDD');
 
-
 UPDATE inspections SET inspection_date = TO_DATE(date, 'YYYYMMDD');
-
 
 **How many inspection types are there?**
 
@@ -81,7 +79,7 @@ All of the scores are from Routine - Unscheduled
 -  FROM inspections
 -  WHERE score is not NULL AND type = 'Routine - Unscheduled';
 
-**Find the duplicates and save it to a view**
+**Find the duplicates and save them to a view**
 
 -  CREATE VIEW duplicate_inspections AS
 -  SELECT inspection_id, count(inspection_id)
@@ -107,9 +105,7 @@ There is a duplicate for business_id 64859 on September 24, 2015.  It received t
 -  FROM inspections
 -  WHERE type = 'Routine - Unscheduled' AND score is not NULL AND date+business_id+CONVERT(varchar(10),score) <> '201509246485991';
 
-
-
-## Cleaning the Violation Dataset
+## Cleaning the Business Dataset
 
 **ADD KEY to violations**
 
@@ -190,7 +186,7 @@ Most of the zips start with 94, there is one that starts with 92, some of the zi
 -  GROUP BY business_id
 -  HAVING COUNT(business_id) > 1;
 
-##REPORTS TO BUSINESS UNIT to VERIFY DATA
+## REPORTS TO BUSINESS UNIT to VERIFY DATA
 
 **Business in violation report not found in businesses list**
 
@@ -224,6 +220,46 @@ Most of the zips start with 94, there is one that starts with 92, some of the zi
 -  WHERE zip is NULL;
 
 [Incorrect Postal code List](busiensses_with_incorrect_zip.csv)
+
+**Note:  If we have access to a database with all San Francisco addresses or longitude and latitude coordinates with their postal codes, we will be able to query that database and find the corresponding postal codes.**
+
+
+## Analysis of the data in the tables:
+
+**1) What is the distribution of "risk_category violations" per zip code? (per zip, what are the numbers/percentages of high/low/moderate risk violations)**
+
+-  CREATE VIEW q1_distribution_of_risk AS
+-  SELECT b.zip, v.risk_category, 
+-  COUNT(*) AS risk_count,
+-  ROUND((COUNT(*) * 1.0 / SUM(COUNT(*)) OVER (PARTITION BY b.zip))*100, 2) as risk_percentage
+-  FROM violation_view v
+-  LEFT JOIN businesses_view b
+-  ON v.business_id = b.business_id
+-  GROUP by v.risk_category, b.zip
+-  ORDER BY b.zip, v.risk_category;
+
+**2) What is the average score of restaurants in the different zip codes by year?**
+
+-  CREATE VIEW q2_avg_score_by_year_zip AS
+-  SELECT DATE_PART_YEAR(s.inspection_date) as year, b.zip, AVG(s.score) as average_score
+-  FROM inspection_score_view s
+-  LEFT JOIN businesses_view b
+-  ON s.business_id = b.business_id
+-  GROUP BY DATE_PART_YEAR(s.inspection_date), b.zip
+-  HAVING zip is not NULL
+-  ORDER BY b.zip, year;
+
+**3) Which are the top 10 restaurants that have the most "High Risk" violations?  What violations are they?**
+
+-  CREATE VIEW q3a_highest_risk_10_restaurants AS
+-  SELECT v.business_id, b.name, v.risk_category, count(v.risk_category) AS high_risk_count
+-  FROM violation_view v
+-  LEFT JOIN businesses_view b
+-  ON v.business_id = b.business_id
+-  GROUP BY v.business_id, b.name, v.risk_category
+-  HAVING v.risk_category = 'High Risk' --AND high_risk_count > 8
+-  ORDER BY high_risk_count DESC, v.business_id
+-  LIMIT 10;
 
 
 
