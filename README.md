@@ -243,7 +243,7 @@ Most of the zips start with 94, there is one that starts with 92, some of the zi
 
 ### Example when filtered is used for this visualization:
 
-![Please see page 1 of this data visualization](San_Francisco_Restaurants_Health_Inspection_Analysis_page1_filtered.pdf)
+![Please see page 1 of this data visualization](San_Francisco_Restaurants_Health_Inspection_Analysis_page1.png)
 
 ![Please see page 2 of this data visualization](San_Francisco_Restaurants_Health_Inspection_Analysis_pg2.png) 
 
