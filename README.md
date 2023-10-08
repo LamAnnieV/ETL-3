@@ -237,7 +237,7 @@ Most of the zips start with 94, there is one that starts with 92, some of the zi
 -  HAVING zip is not NULL
 -  ORDER BY b.zip, v.risk_category;
 
-      [Distribution of Risk](q1_distribution_of_risk.csv)
+      [CSV of Distribution of Risk](q1_distribution_of_risk.csv)
 
 **2) What is the average score of restaurants in the different zip codes by year?**
 
@@ -250,7 +250,7 @@ Most of the zips start with 94, there is one that starts with 92, some of the zi
 -  HAVING zip is not NULL
 -  ORDER BY b.zip, year;
 
-      [Average score of restaurants in the different zip codes by year](q2_avg_score_by_year_zip.csv)
+      [CSV of Average score of restaurants in the different zip codes by year](q2_avg_score_by_year_zip.csv)
 
 **3) Which are the top 10 restaurants that have the most "High Risk" violations?  What violations are they?**
 
@@ -264,7 +264,7 @@ Most of the zips start with 94, there is one that starts with 92, some of the zi
 -  ORDER BY high_risk_count DESC, v.business_id
 -  LIMIT 10;
 
-      [Top 10 restaurants that have the most "High Risk" violations](q3a_highest_risk_10_restaurants.csv)
+      [CSV of Top 10 restaurants that have the most "High Risk" violations](q3a_highest_risk_10_restaurants.csv)
 
 -  CREATE VIEW q3b_highest_risk_10_restaurants_violations AS
 -  SELECT DATE_PART_YEAR(v.date) as year, v.business_id, b.name, v.risk_category, v.violationtypeid, v.description
@@ -275,6 +275,6 @@ Most of the zips start with 94, there is one that starts with 92, some of the zi
 -  FROM violation_view)
 -  ORDER BY b.name, year, v.violationtypeid;
 
-      [Violations of the Top 10 restaurants that have the most "High Risk" violations](q3b_highest_risk_10_restaurants_violations.csv)
+      [CSV of Violations of the Top 10 restaurants that have the most "High Risk" violations](q3b_highest_risk_10_restaurants_violations.csv)
 
 
