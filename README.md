@@ -272,7 +272,7 @@ Click on each layer and a tool tip will pop up.  The numbers next to the "(inclu
 
 ![Please see page 3 of this data visualization](San_Francisco_Restaurants_Health_Inspection_Analysis_pg3.png) 
 
-Notice that there are some zip codes that do not have data for all four years.  Research is required to determine why there are no data for some years.
+Notice that there are some zip codes that do not have data for all four years.  Research is required to determine why there is no data for some years.
 
 **3) Which are the top 10 restaurants that have the most "High Risk" violations?  What violations are they?**
 
@@ -288,8 +288,6 @@ Notice that there are some zip codes that do not have data for all four years.  
 
       [CSV of Top 10 restaurants that have the most "High Risk" violations](q3a_highest_risk_10_restaurants.csv)
 
-
-
 -  CREATE VIEW q3b_highest_risk_10_restaurants_violations AS
 -  SELECT DATE_PART_YEAR(v.date) as year, v.business_id, b.name, v.risk_category, v.violationtypeid, v.description
 -  FROM q3a_highest_risk_10_restaurants b
@@ -302,5 +300,7 @@ Notice that there are some zip codes that do not have data for all four years.  
       [CSV of Violations of the Top 10 restaurants that have the most "High Risk" violations](q3b_highest_risk_10_restaurants_violations.csv)
 
 ![Please see page 4 of this data visualization](San_Francisco_Restaurants_Health_Inspection_Analysis_pg4.png) 
+
+The visualization is for the top 10 restaurants.  However, I would recommend to list the restaurants that have 9 or more high-risk violations, since there are around 15 ties for restaurants that have 8 high risk violations.
 
 
