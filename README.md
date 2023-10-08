@@ -240,7 +240,20 @@ Most of the zips start with 94, there is one that starts with 92, some of the zi
       [CSV of Distribution of Risk](q1_distribution_of_risk.csv)
 
       ![Please see page 1 of this data visualization](San_Francisco_Restaurants_Health_Inspection_Analysis_pg1.png)
+
+### Example when filtered is used for this visualization:
+
+      ![Please see page 1 of this data visualization](San_Francisco_Restaurants_Health_Inspection_Analysis_page1_filtered.pdf)
+
       ![Please see page 2 of this data visualization](San_Francisco_Restaurants_Health_Inspection_Analysis_pg2.png) 
+
+### Example when filtered is used for this visualization:
+
+      ![Please see page 2 of this data visualization example 1](Heat_Map_Low_Risk.png)
+
+      ![Please see page 2 of this data visualization example 2](Heat_Map_Moderate_Risk.png) 
+
+      ![Please see page 2 of this data visualization example 3](Heat_Map_High_Risk.png) 
 
 **2) What is the average score of restaurants in the different zip codes by year?**
 
