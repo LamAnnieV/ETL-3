@@ -237,7 +237,7 @@ Most of the zips start with 94, there is one that starts with 92, some of the zi
 -  HAVING zip is not NULL
 -  ORDER BY b.zip, v.risk_category;
 
-      [Click Here to see the CSV for Distribution of Risk](q1_distribution_of_risk.csv)
+      [Click here to see the CSV query result from above](q1_distribution_of_risk.csv)
 
 ![Please see page 1 of this data visualization](San_Francisco_Restaurants_Health_Inspection_Analysis_pg1.png)
 
@@ -268,7 +268,7 @@ Click on each layer and a tool tip will pop up.  The numbers next to the "(inclu
 -  HAVING zip is not NULL
 -  ORDER BY b.zip, year;
 
-      [CSV of Average score of restaurants in the different zip codes by year](q2_avg_score_by_year_zip.csv)
+      [Click here to see the CSV query result from above](q2_avg_score_by_year_zip.csv)
 
 ![Please see page 3 of this data visualization](San_Francisco_Restaurants_Health_Inspection_Analysis_pg3.png) 
 
@@ -286,7 +286,7 @@ Notice that there are some zip codes that do not have data for all four years.  
 -  ORDER BY high_risk_count DESC, v.business_id
 -  LIMIT 10;
 
-      [CSV of Top 10 restaurants that have the most "High Risk" violations](q3a_highest_risk_10_restaurants.csv)
+      [Click here to see the CSV query result from above](q3a_highest_risk_10_restaurants.csv)
 
 -  CREATE VIEW q3b_highest_risk_10_restaurants_violations AS
 -  SELECT DATE_PART_YEAR(v.date) as year, v.business_id, b.name, v.risk_category, v.violationtypeid, v.description
@@ -297,7 +297,7 @@ Notice that there are some zip codes that do not have data for all four years.  
 -  FROM violation_view)
 -  ORDER BY b.name, year, v.violationtypeid;
 
-      [CSV of Violations of the Top 10 restaurants that have the most "High Risk" violations](q3b_highest_risk_10_restaurants_violations.csv)
+      [Click here to see the CSV query result from above](q3b_highest_risk_10_restaurants_violations.csv)
 
 ![Please see page 4 of this data visualization](San_Francisco_Restaurants_Health_Inspection_Analysis_pg4.png) 
 
