@@ -1,0 +1,101 @@
+business_id,name,address,city,postal_code,zip
+67875,The Chairman Truck, Off The Grid  ,SF,0,null
+5208,GOLDEN GATE YACHT CLUB,1 YACHT Rd ,SAN FRANCISCO,941,null
+6561,Plumpjack Wines,4011 24th St ,San Francisco,941,null
+64540,Leo's Hot Dogs,2301 Mission St ,S.F.,CA,null
+64738,Japacurry, Public  ,SF,CA,null
+81376,Trilogi SF,425 Barneveld Ave ,San Francisco,CA,null
+88139,Tacolicious,2250 Chestnut St ,San Francisco,Ca,null
+88160,Spice Affairs,1028 Market St ,San Francisco,Ca,null
+8202,Xiao Loong,250 WEST PORTAL AVENUE,null,null,null
+9281,Walgreen's,199 Parnassus Ave,null,null,null
+9328,Boos Voni Tortas,5170 Mission St ,null,null,null
+9358,Edgewood Children's Center,1801 Vicente St ,null,null,null
+9582,Dimples,1700 Post St.,null,null,null
+9627,Home Sausage Company,1726 mission st.,null,null,null
+10011,Osha Thai Noodle,819 Valencia St.,null,null,null
+10129,Man Hang Catering,2041 18th Ave ,SO.S.F.,null,null
+10227,The Napper Tandy,3200 24th St ,null,null,null
+10372,BERNAL HEIGHTS NEIGBORHOOD CENTER,515 CORTLAND AVE,null,null,null
+10373,El Tonayense #4,1717 Harrison St ,null,null,null
+10376,Good Frikin Chicken,10 29th St ,null,null,null
+10406,Sunset Youth Services,3918 Judah St,null,null,null
+10572,Edison Charter Academy,3531 22nd St ,null,null,null
+10831,Eezy Freezy Health & Gourmet Food,25 West Portal Ave.,null,null,null
+11416,El Beach Burrito,3914 Judah St,null,null,null
+11835,Barrette Cafeteria,3250 19th Ave ,null,null,null
+11967,Canteen Vending Company,VARIOUS LOCATIONS,null,null,null
+11974,West Coast Vending & Food Service,VARIOUS LOCATIONS,null,null,null
+12199,El Gallo Giro,3055 23rd St ,null,null,null
+12344,The Village Market & Pizza,750 Font Blvd,null,null,null
+13057,Mission Street Arco,1798 mission st.,null,null,null
+13062,Everett Middle School,450 church st.,null,null,null
+13753,Taboun,203 Parnassus Ave ,null,null,null
+14940,City Smoke,2196 Mission St ,null,null,null
+17423,Project Open Hand,100 Diamond St ,null,null,null
+17946,Pizzeria Delfina,3611 18th St ,null,null,null
+18079,Joe's coffee Shop,6134 Geary Blvd ,null,null,null
+19357,Original Buffalo Wings,2499 Lombard St ,null,null,null
+33114,Sausalito Cafe #2,50 Beale St 105,null,null,null
+33766,Union Latina Soccer, union latina soccer; 3/24-6/23/07  ,null,null,null
+34201,Trouble Coffee Company,4033 Judah St ,null,null,null
+34331,Stanley's Steamers, NW Corner Grant at Geary St on Grant,null,null,null
+34635,S B House  Inc.,5158 Geary Blvd ,null,null,null
+35469,Subway #36339,1099 Mission St ,null,null,null
+36608,Taqueria Angelia's,1301 Cesar Chavez St ,null,null,null
+38146,San Pancho's Tacos,491 Bayshore St ,null,null,null
+39086,Wafflemania,1 United Nations Pl ,null,null,null
+39481,Mateo's Bay Area Hot Dogs,833 Bryant St ,SF,null,null
+39482,Ghirardelli Chocolate,24 Willie Mays Plaza  ,null,null,null
+57653,Tacos San Buena #2,79 Sansome St ,null,null,null
+58675,Canon Kip Community House Senior Center,705 Natoma St ,null,null,null
+60547,Annie's Hot Dogs & Pretzels," Golden Gate Park, Music Concourse  ",SF,null,null
+60548,Annie's Hot Dogs & Pretzels," Golden Gate Park, JFK Dr.@Conservatory of Flowers  ",SF,null,null
+60549,Annie's Hot Dogs & Pretzels," Golden Gate Park, Spreckles Lake  ",SF,null,null
+60550,Annie's Hot Dogs & Pretzels," Golden Gate Park, JFK Dr.@8th Ave  ",Sf,null,null
+60551,Annie's Hot Dogs & Pretzels," Golden Gate Park, Carousel Snack Bar  ",SF,null,null
+61967,Meals on Wheels for Homeless,1 United Nations Pl ,null,null,null
+62244,Munch-A-Bunch Catering,310 Pine St ,null,null,null
+62710,Sam's Chowder Mobile, Golden Gate Park  ,SF,null,null
+62797,BHL,2 Embarcadero Center  Street Level,null,null,null
+62797,BHL,2 Embarcadero Center  Street Level,null,null,null
+63210,Let's Be Frank, Justin Herman Plaza  ,SF,null,null
+63624,Seoul on Wheels, Fort Mason,SF,null,null
+64194,"Ebbett's Good To Go, Inc.", Off The Grid-Civic Center/City Hall  ,null,null,null
+64319,Littlegreencyclo LLC, Off The Grid-Upper Haight  ,SF,null,null
+64333,The Crème Brulee Cart, Market  & Sutter  ,SF,null,null
+64447,Toya Stewart,0 Terry A Francisco  ,SF,null,null
+64463,415 Dogs, Off The Grid  ,SF,null,null
+64484,Twirl and Dip, Off The Grid - Stanyon/Civic Center  ,SF,null,null
+65266,"Off The Grid Services, LLC", Off The Grid  ,SF,null,null
+65363,Cafe Terzetto,550 D Gene Friend Way ,SF,null,null
+65377,Baysubway 04,550 Gene Friends Way ,null,null,null
+65383,Cafe 24,1200 16th St ,SF,null,null
+65384,Publico,550 A Gene Friend Way ,SF,null,null
+65479,An The Go, Off The Grid  ,SF,null,null
+65614,The Taco Guys Inc., Off The Grid  ,null,null,null
+65803,"Viet Duong Co., Ltd.", One Bush Plaza  ,SF,null,null
+65804,The Sandwich Stand,351 California St ,SF,null,null
+65805,The Sandwich Stand,58 Main St ,SF,null,null
+66492,Pacific Puffs, Off The Grid  ,SF,null,null
+66511,SFGH Volunteer Dept.,1001 Potrero Ave ,null,null,null
+66642,Tandoori Chicken USA Mobile, Off The Grid  ,null,null,null
+66698,Stanley's Steamers, Macys - Geary Entrance  ,null,null,null
+66698,Stanley's Steamers, Macys - Geary Entrance  ,null,null,null
+66698,Stanley's Steamers, Macys - Geary Entrance  ,null,null,null
+66698,Stanley's Steamers, Macys - Geary Entrance  ,null,null,null
+66759,null,null,null,null,null
+66817,Casey's Pizza, Off The Grid  ,null,null,null
+66921,Celtic Catering,601 Folsom St ,SF,null,null
+66922,The Crème Brulee Cart, Off The Grid  ,SF,null,null
+67124,Alicia's Tamales Los Mayas, Justin Herman Plaza  ,SF,null,null
+67167,Naked Chorizo, Off The Grid  ,null,null,null
+67466,Kara's Cupcakes Inc., Off The Grid  ,null,null,null
+67486,Phat Thai, Off The Grid  ,SF,null,null
+67840,Subs on Hubs,933 Brannan St ,null,null,null
+68068,The Chai Cart,525 Market/360 Valencia  ,null,null,null
+68237,Jane Hammond Events Inc., Hunters Point Building 110 Shipyard  ,SF,null,null
+68377,A Jelly Bean Thing/Good Foods Catering, Hunters Point Building 110 Shipyard  ,null,null,null
+68468,Quan Catering,696 Amador St ,null,null,null
+68500,Drip! Mobile Espresso, Treasure Island Flea Market  ,null,null,null
+68544,Sorabol Metreon,135 04th St FC-3,SF,null,null
