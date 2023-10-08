@@ -301,6 +301,6 @@ Notice that there are some zip codes that do not have data for all four years.  
 
 ![Please see page 4 of this data visualization](San_Francisco_Restaurants_Health_Inspection_Analysis_pg4.png) 
 
-The visualization is for the top 10 restaurants.  However, I would recommend to list the restaurants that have 9 or more high-risk violations, since there are around 15 ties for restaurants that have 8 high risk violations.
+This visualization is for the top 10 restaurants.  However, I would recommend to list the restaurants that have 9 or more high risk violations, since there are around 15 ties for restaurants that have 8 high risk violations.
 
 
