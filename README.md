@@ -241,15 +241,15 @@ Most of the zips start with 94, there is one that starts with 92, some of the zi
 
 ![Please see page 1 of this data visualization](San_Francisco_Restaurants_Health_Inspection_Analysis_pg1.png)
 
-### Example when filtered is used for this visualization:
+### Example when filter is used for this visualization:
 
 ![Please see page 1 of this data visualization](San_Francisco_Restaurants_Health_Inspection_Analysis_page1.png)
 
 ![Please see page 2 of this data visualization](San_Francisco_Restaurants_Health_Inspection_Analysis_pg2.png) 
 
-### Example when filtered is used for this visualization:
+### Example when filter is used for this visualization:
 
-Click on each layer and a tool tip will popup.  The numbers next to the "(included)" are the percentage of that risk category for the selected zip code.
+Click on each layer and a tool tip will pop up.  The numbers next to the "(included)" are the percentage of that risk category for the selected zip code.  If you add all three percentages together, it should be equal to 100%.  There may be rounding differences.  
 
 ![Please see page 2 of this data visualization example 1](Heat_Map_Low_Risk.png)
 
@@ -272,6 +272,8 @@ Click on each layer and a tool tip will popup.  The numbers next to the "(includ
 
 ![Please see page 3 of this data visualization](San_Francisco_Restaurants_Health_Inspection_Analysis_pg3.png) 
 
+Notice that there are some zip codes that do not have data for all four years.  Research is required to determine why there are no data for some years.
+
 **3) Which are the top 10 restaurants that have the most "High Risk" violations?  What violations are they?**
 
 -  CREATE VIEW q3a_highest_risk_10_restaurants AS
@@ -286,7 +288,7 @@ Click on each layer and a tool tip will popup.  The numbers next to the "(includ
 
       [CSV of Top 10 restaurants that have the most "High Risk" violations](q3a_highest_risk_10_restaurants.csv)
 
-   Notice that there are some zip codes that do not have data for all four years.  Research is required to determine why there is no data for some years.
+
 
 -  CREATE VIEW q3b_highest_risk_10_restaurants_violations AS
 -  SELECT DATE_PART_YEAR(v.date) as year, v.business_id, b.name, v.risk_category, v.violationtypeid, v.description
