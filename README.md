@@ -239,8 +239,8 @@ Most of the zips start with 94, there is one that starts with 92, some of the zi
 
       [CSV of Distribution of Risk](q1_distribution_of_risk.csv)
 
-      ![Please see page 1 of this data visualization](San_Francisco_Restaurants_Health_Inspection_Analysis_pg1.pdf)
-      ![Please see page 2 of this data visualization](San_Francisco_Restaurants_Health_Inspection_Analysis_pg2.pdf) 
+      [Please see page 1 of this data visualization](San_Francisco_Restaurants_Health_Inspection_Analysis.pdf)
+      [Please see page 2 of this data visualization](San_Francisco_Restaurants_Health_Inspection_Analysis.pdf) 
 
 **2) What is the average score of restaurants in the different zip codes by year?**
 
@@ -255,7 +255,7 @@ Most of the zips start with 94, there is one that starts with 92, some of the zi
 
       [CSV of Average score of restaurants in the different zip codes by year](q2_avg_score_by_year_zip.csv)
 
-      ![Please see page 3 of this data visualization](San_Francisco_Restaurants_Health_Inspection_Analysis_pg3.pdf) 
+      [Please see page 3 of this data visualization](San_Francisco_Restaurants_Health_Inspection_Analysis.pdf) 
 
 **3) Which are the top 10 restaurants that have the most "High Risk" violations?  What violations are they?**
 
@@ -282,6 +282,6 @@ Most of the zips start with 94, there is one that starts with 92, some of the zi
 
       [CSV of Violations of the Top 10 restaurants that have the most "High Risk" violations](q3b_highest_risk_10_restaurants_violations.csv)
 
-      ![Please see page 4 of this data visualization](San_Francisco_Restaurants_Health_Inspection_Analysis_pg4.pdf) 
+      [Please see page 4 of this data visualization](San_Francisco_Restaurants_Health_Inspection_Analysis.pdf) 
 
 
