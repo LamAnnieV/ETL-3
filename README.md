@@ -237,7 +237,7 @@ Most of the zips start with 94, there is one that starts with 92, some of the zi
 -  HAVING zip is not NULL
 -  ORDER BY b.zip, v.risk_category;
 
-      [CSV of Distribution of Risk](q1_distribution_of_risk.csv)
+      [Click Here to see the CSV for Distribution of Risk](q1_distribution_of_risk.csv)
 
 ![Please see page 1 of this data visualization](San_Francisco_Restaurants_Health_Inspection_Analysis_pg1.png)
 
