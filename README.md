@@ -249,6 +249,8 @@ Most of the zips start with 94, there is one that starts with 92, some of the zi
 
 ### Example when filtered is used for this visualization:
 
+Click on each layer and a tool tip will popup.  The numbers next to the "(included)" are the percentage of that risk category for the selected zip code.
+
 ![Please see page 2 of this data visualization example 1](Heat_Map_Low_Risk.png)
 
 ![Please see page 2 of this data visualization example 2](Heat_Map_Moderate_Risk.png) 
@@ -283,6 +285,8 @@ Most of the zips start with 94, there is one that starts with 92, some of the zi
 -  LIMIT 10;
 
       [CSV of Top 10 restaurants that have the most "High Risk" violations](q3a_highest_risk_10_restaurants.csv)
+
+   Notice that there are some zip codes that do not have data for all four years.  Research is required to determine why there is no data for some years.
 
 -  CREATE VIEW q3b_highest_risk_10_restaurants_violations AS
 -  SELECT DATE_PART_YEAR(v.date) as year, v.business_id, b.name, v.risk_category, v.violationtypeid, v.description
